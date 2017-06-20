@@ -1,16 +1,23 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>SmallExample</title>
-    <base href="/">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css"
-          integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
-</head>
+  <meta charset="utf-8">
+  <title>Servant3</title>
+  <base href="/">
+  <link rel="manifest" href="/assets/manifest.json">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<link href="styles.e91c97bf57182be064b5.bundle.css" rel="stylesheet"/></head>
 <body>
-<app-root>Loading...</app-root>
-<script type="text/javascript" src="inline.js"></script><script type="text/javascript" src="main.bundle.js"></script></body>
+  <app-root></app-root>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+        console.log('Service Worker registered');
+      }).catch(function(err) {
+        console.log('Service Worker registration failed: ', err);
+      });
+    }
+  </script>
+<script type="text/javascript" src="inline.03af0fa61e4f984f169b.bundle.js"></script><script type="text/javascript" src="polyfills.652ef966ac5414a711ed.bundle.js"></script><script type="text/javascript" src="vendor.1ad1b3422703dafda1c7.bundle.js"></script><script type="text/javascript" src="main.c95588120caf806fb55f.bundle.js"></script></body>
 </html>
